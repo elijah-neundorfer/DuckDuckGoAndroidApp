@@ -28,6 +28,7 @@ import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.lifecycle.Observer
 import com.duckduckgo.app.about.AboutDuckDuckGoActivity
+import com.duckduckgo.app.settings.ClearCommEndUserPrivacyUI
 import com.duckduckgo.app.browser.R
 import com.duckduckgo.app.feedback.ui.common.FeedbackActivity
 import com.duckduckgo.app.fire.fireproofwebsite.ui.FireproofWebsitesActivity
@@ -85,6 +86,7 @@ class SettingsActivity : DuckDuckGoActivity(), SettingsAutomaticallyClearWhatFra
     private fun configureUiEventHandlers() {
         changeAppIconLabel.setOnClickListener { viewModel.userRequestedToChangeIcon() }
         about.setOnClickListener { startActivity(AboutDuckDuckGoActivity.intent(this)) }
+        privacy_behavior.setOnClickListener { startActivity(Intent(this, ClearCommEndUserPrivacyUI::class.java)) }
         provideFeedback.setOnClickListener { viewModel.userRequestedToSendFeedback() }
         fireproofWebsites.setOnClickListener { viewModel.onFireproofWebsitesClicked() }
         locationPermissions.setOnClickListener { viewModel.onLocationClicked() }

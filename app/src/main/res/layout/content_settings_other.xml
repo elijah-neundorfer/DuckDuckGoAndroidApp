@@ -38,12 +38,20 @@
         app:layout_constraintTop_toBottomOf="@id/settingsOtherTitle" />
 
     <TextView
+        android:id="@+id/privacy_behavior"
+        style="@style/SettingsItemClickable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Privacy Behavior"
+        app:layout_constraintTop_toBottomOf="@id/about" />
+
+    <TextView
         android:id="@+id/provideFeedback"
         style="@style/SettingsItemClickable"
         android:text="@string/leaveFeedback"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/about" />
+        app:layout_constraintTop_toBottomOf="@id/privacy_behavior" />
 
     <com.duckduckgo.app.settings.SettingsOptionWithSubtitle
         android:id="@+id/version"
